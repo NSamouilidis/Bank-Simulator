@@ -17,7 +17,7 @@ The program is designed to be user friendly, guiding you through each transactio
 
 Future Versions:
 
-V2: Add a credit card feature with an income-based eligibility system.
+V2: Add a credit card feature with an income-based eligibility system. (done)
 
 V3: Introduce loan options, stock investment features, and a calculator to estimate how many years it would take to become a millionaire based on monthly investments.
 
