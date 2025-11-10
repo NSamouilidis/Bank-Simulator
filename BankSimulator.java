@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class BankSimulator {
     public static void main(String[] args) {
         double balance = 0;
+        Customer customer = new Customer(22,3450,"Thomas","West Banhof","thomas2025@gmail.com","5220940293","Wien","male");
 
         Scanner input = new Scanner(System.in);
         String userChoice2;
@@ -10,7 +11,7 @@ public class BankSimulator {
         IO.println("Welcome to FreeBank");
 
         while (true) {
-            IO.println("Please select an operation: 1.Balance, 2.Withdrawal, 3.Deposit, 4.Exit");
+            IO.println("Please select an operation: 1.Balance, 2.Withdrawal, 3.Deposit,4.Credit card eligibility,5.Check income, 6.Exit");
             int userChoice = input.nextInt();
 
             if (userChoice == 1) {
@@ -35,7 +36,18 @@ public class BankSimulator {
                 IO.println("Your deposit is $" + amountD);
                 IO.println("Your new balance is $" + balance);
 
-            } else if (userChoice == 4) {
+            }
+            else if (userChoice == 4) {
+                CreditCard.checkEligibility(customer);
+
+
+            }
+            else if (userChoice == 5) {
+                IncomeChecker.CheckIncome(customer);
+
+
+            }
+            else if (userChoice == 6) {
                 IO.println("Thanks for choosing FreeBank");
                 break;
 
